@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { AnimatedNumber } from '../components/AnimatedNumber';
 import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { SectionHeader } from '../components/SectionHeader';
+import { MockupWindow } from '../components/MockupWindow';
 
 export default function CaseStudyAlbum() {
   return (
@@ -52,12 +54,7 @@ export default function CaseStudyAlbum() {
         
         {/* Section 1: The Challenge */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            The Challenge
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Bridging the gap between Web2 and Web3
-          </h2>
+          <SectionHeader label="The Challenge" title="Bridging the gap between Web2 and Web3" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed mb-6">
             Web3 marketplaces often face retention challenges. After the initial purchase, users frequently disengage until the next speculation opportunity arises.
           </p>
@@ -68,12 +65,7 @@ export default function CaseStudyAlbum() {
 
         {/* Section 2: Strategy */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            Strategy
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Leveraging the Power of Nostalgia
-          </h2>
+          <SectionHeader label="Strategy" title="Leveraging the Power of Nostalgia" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed mb-6">
             We identified that the most effective way to educate and engage users was through <strong className="text-white">Emotional Design</strong>. By utilizing the familiar mental model of physical sticker albums, we simplified the digital transition.
           </p>
@@ -84,28 +76,11 @@ export default function CaseStudyAlbum() {
         </section>
 
         {/* Cover Desktop Mockup */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="w-full bg-[#0a0a0a] rounded-[2rem] border border-[#222] overflow-hidden relative mb-16"
-        >
-          <div className="absolute inset-x-0 top-0 h-6 md:h-8 bg-[#111] flex items-center px-4 md:px-6 gap-2 border-b border-white/10 z-10">
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-[#ff5f56]"></div>
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-[#ffbd2e]"></div>
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-[#27c93f]"></div>
-          </div>
-          <img src="/bahia-cover.png" alt="Album Cover Interface" className="w-full h-auto object-cover pt-6 md:pt-8" />
-        </motion.div>
+        <MockupWindow src="/bahia-cover.png" alt="Album Cover Interface" className="mb-16" />
 
         {/* Section 3: Delivery & Execution */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            Delivery & Execution
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Agile Prototyping & Architecture
-          </h2>
+          <SectionHeader label="Delivery & Execution" title="Agile Prototyping & Architecture" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed mb-6">
             Facing an aggressive time-to-market, I prioritized a High-Fidelity MVP. Instead of lengthy wireframing cycles, we moved straight to high-fidelity prototypes. This allowed for rapid usability testing and immediate transition to development, ensuring the creative vision was maintained despite the tight deadline.
           </p>
@@ -120,19 +95,7 @@ export default function CaseStudyAlbum() {
         </section>
 
         {/* Desktop Mockup Image */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="w-full bg-[#0a0a0a] rounded-[2rem] border border-[#222] overflow-hidden relative mb-16"
-        >
-          <div className="absolute inset-x-0 top-0 h-6 md:h-8 bg-[#111] flex items-center px-4 md:px-6 gap-2 border-b border-white/10 z-10">
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-[#ff5f56]"></div>
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-[#ffbd2e]"></div>
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-[#27c93f]"></div>
-          </div>
-          <img src="/index_bahia_desktop.png" alt="Strategic Routing Interface" className="w-full h-auto object-cover pt-6 md:pt-8" />
-        </motion.div>
+        <MockupWindow src="/index_bahia_desktop.png" alt="Strategic Routing Interface" className="mb-16" />
         
         <section className="max-w-4xl">
           <h3 className="text-2xl font-bold mb-6 text-white">Strategic Routing & Conversion</h3>
@@ -150,34 +113,8 @@ export default function CaseStudyAlbum() {
 
         {/* Additional Desktop Mockups */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="w-full bg-[#0a0a0a] rounded-[1.5rem] border border-[#222] overflow-hidden relative"
-          >
-            <div className="absolute inset-x-0 top-0 h-6 bg-[#111] flex items-center px-4 gap-2 border-b border-white/10 z-10">
-              <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
-            </div>
-            <img src="/gols-bahia.png" alt="Gols Interface" className="w-full h-auto object-cover pt-6" />
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="w-full bg-[#0a0a0a] rounded-[1.5rem] border border-[#222] overflow-hidden relative"
-          >
-            <div className="absolute inset-x-0 top-0 h-6 bg-[#111] flex items-center px-4 gap-2 border-b border-white/10 z-10">
-              <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
-            </div>
-            <img src="/assets-buy.png" alt="Assets Interface" className="w-full h-auto object-cover pt-6" />
-          </motion.div>
+          <MockupWindow src="/gols-bahia.png" alt="Gols Interface" />
+          <MockupWindow src="/assets-buy.png" alt="Assets Interface" />
         </div>
 
         {/* Results & Impact */}
@@ -253,12 +190,7 @@ export default function CaseStudyAlbum() {
 
         {/* Conclusion */}
         <section className="max-w-4xl pb-10">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            Conclusion
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Data-Driven Success
-          </h2>
+          <SectionHeader label="Conclusion" title="Data-Driven Success" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed italic">
             The success of the Digital Album was a result of combining data-driven design with a robust partnership strategy. While the interface ensured retention and conversion, ecosystem partners scaled visibility and results. This project demonstrated that bridging Web2 nostalgia with Web3 mechanics can create a powerful, sustainable revenue engine.
           </p>

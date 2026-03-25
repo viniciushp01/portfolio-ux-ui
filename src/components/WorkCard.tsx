@@ -55,9 +55,9 @@ export const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
             View Case
           </Link>
         ) : (
-          <button className="mt-4 px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-[#e0e0e0] transition-colors">
-            View Case
-          </button>
+          <span className="mt-4 px-8 py-3 bg-[#222] text-[#666] font-semibold rounded-full cursor-not-allowed">
+            Coming Soon
+          </span>
         )}
       </div>
     </div>

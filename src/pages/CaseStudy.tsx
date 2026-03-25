@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import { AnimatedNumber } from '../components/AnimatedNumber';
 import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { SectionHeader } from '../components/SectionHeader';
+import { MockupWindow } from '../components/MockupWindow';
 
 export default function CaseStudy() {
   const [hoveredPhone, setHoveredPhone] = useState<string | null>(null);
@@ -146,12 +148,7 @@ export default function CaseStudy() {
       <div className="space-y-32">
         {/* Challenge */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            The Challenge
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            How to scale user acquisition for BlinkPlanet?
-          </h2>
+          <SectionHeader label="The Challenge" title="How to scale user acquisition for BlinkPlanet?" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed">
             The Web3 ecosystem evolves rapidly. With the rise of Telegram Web Apps (tap-to-earn style), we identified a prime opportunity to attract highly engaged users. The challenge was: how to build a social app that wasn't just a 'clicker,' but a powerful traffic and conversion engine for the BlinkPlanet marketplace?
           </p>
@@ -159,12 +156,7 @@ export default function CaseStudy() {
 
         {/* Discovery */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            Discovery
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Initial Strategy
-          </h2>
+          <SectionHeader label="Discovery" title="Initial Strategy" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed">
             We analyzed the explosion of Telegram communities using simple reward mechanics for retention. Our hypothesis: Integrating a Social App directly with BlinkPlanet to significantly reduce Customer Acquisition Cost (CAC). Due to an aggressive time-to-market, we prioritized a High-Fidelity MVP. This ensured a premium first impression and allowed for live iterations based on real-time user feedback.
           </p>
@@ -172,12 +164,7 @@ export default function CaseStudy() {
 
         {/* MVP */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            MVP
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            First Version
-          </h2>
+          <SectionHeader label="MVP" title="First Version" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed mb-8">
             The product's foundation was built on classic gamification mechanics to drive immediate engagement.
           </p>
@@ -231,12 +218,7 @@ export default function CaseStudy() {
         </div>
         {/* Iteration */}
         <section className="max-w-4xl">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            Iteration
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Data driven iteration: The turning point
-          </h2>
+          <SectionHeader label="Iteration" title="Data driven iteration: The turning point" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed mb-6">
             Post-launch data revealed a bottleneck: engagement was high, but marketplace conversion remained low. Passive 'tapping' didn't create enough perceived value to drive actual transactions.
           </p>
@@ -366,12 +348,7 @@ export default function CaseStudy() {
 
         {/* Conclusion */}
         <section className="max-w-4xl pb-10">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#a1a1a1] mb-4 block">
-            Conclusion
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
-            Strategic Outcomes
-          </h2>
+          <SectionHeader label="Conclusion" title="Strategic Outcomes" />
           <p className="text-lg text-[#a1a1a1] leading-relaxed italic">
             Leading the BPX project enhanced my strategic communication with stakeholders and validated the impact of documenting high-performance usability logic. By applying Design Thinking, I translated raw data into creative solutions, precisely adapting the product to evolving challenges. This journey proved that combining grounded design with rapid feedback loops is the key to solid, scalable results.
           </p>
