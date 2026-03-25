@@ -89,8 +89,12 @@ export default function CaseStudy() {
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="w-full relative h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a0b2e] via-[#050505] to-[#000000] flex items-center justify-center mb-20 border-y border-[#222] overflow-hidden cursor-default -mx-4 md:-mx-8 lg:-mx-20"
+        className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-[280px] sm:h-[320px] md:h-[420px] lg:h-[480px] bg-[#050505] flex items-center justify-center mb-20 border-y border-white/5 overflow-hidden cursor-default"
       >
+        {/* Modern Premium Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#1a0b2e_0%,_transparent_70%)] opacity-60"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,#050505)]"></div>
+
         {/* Subtle Noise Texture */}
         <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
         

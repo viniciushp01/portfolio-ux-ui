@@ -19,12 +19,12 @@ export function Header() {
         
         {/* Desktop Nav */}
         <nav className="hidden sm:flex gap-6 md:gap-10">
-          <a href="/#selected-works" className="text-white text-[13px] uppercase tracking-[0.5px] opacity-80 hover:opacity-100 transition-opacity">
+          <Link to="/#selected-works" className="text-white text-[13px] uppercase tracking-[0.5px] opacity-80 hover:opacity-100 transition-opacity">
             Selected works
-          </a>
-          <a href="/#about" className="text-white text-[13px] uppercase tracking-[0.5px] opacity-80 hover:opacity-100 transition-opacity">
+          </Link>
+          <Link to="/#about" className="text-white text-[13px] uppercase tracking-[0.5px] opacity-80 hover:opacity-100 transition-opacity">
             About
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -47,12 +47,12 @@ export function Header() {
             transition={{ duration: 0.2 }}
             className="flex flex-col items-center gap-8 py-10 bg-[#0d0d0d] border-b border-[#222] sm:hidden w-full shadow-2xl absolute top-full left-0"
           >
-            <a href="/#selected-works" onClick={() => setIsMobileMenuOpen(false)} className="text-white text-[13px] uppercase tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
+            <Link to="/#selected-works" onClick={() => setIsMobileMenuOpen(false)} className="text-white text-[13px] uppercase tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
               Selected works
-            </a>
-            <a href="/#about" onClick={() => setIsMobileMenuOpen(false)} className="text-white text-[13px] uppercase tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
+            </Link>
+            <Link to="/#about" onClick={() => setIsMobileMenuOpen(false)} className="text-white text-[13px] uppercase tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
               About
-            </a>
+            </Link>
           </motion.nav>
         )}
       </AnimatePresence>
