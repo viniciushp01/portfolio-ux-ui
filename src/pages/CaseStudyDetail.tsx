@@ -15,13 +15,14 @@ export default function CaseStudyDetail() {
   }
 
   return (
-    <CaseStudyLayout
-      title={data.title}
-      subtitle={data.subtitle}
-      role={data.role}
-      project={data.project}
-      duration={data.duration}
-    >
+    <div key={slug}>
+      <CaseStudyLayout
+        title={data.title}
+        subtitle={data.subtitle}
+        role={data.role}
+        project={data.project}
+        duration={data.duration}
+      >
       <CaseStudyHero hero={data.hero} />
 
       <div className="space-y-32">
@@ -89,5 +90,6 @@ export default function CaseStudyDetail() {
         </section>
       </div>
     </CaseStudyLayout>
-  );
+  </div>
+);
 }
