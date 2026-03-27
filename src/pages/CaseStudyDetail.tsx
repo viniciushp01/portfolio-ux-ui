@@ -37,27 +37,55 @@ export default function CaseStudyDetail() {
 
         {/* Project Navigation */}
         <section className="pt-20 border-t border-[#222] flex flex-col md:flex-row justify-between gap-8 pb-10">
-          <Link 
-            to={`/case-study/${data.previousProject.slug}`} 
-            className="group flex flex-col gap-4 p-8 rounded-3xl border border-[#222] bg-[#0a0a0a] hover:border-[#444] transition-all duration-300 flex-1"
-          >
-            <div className="flex items-center gap-2 text-[#a1a1a1] group-hover:text-white transition-colors">
-              <ChevronLeft size={20} />
-              <span className="text-sm font-semibold uppercase tracking-widest">Previous Project</span>
-            </div>
-            <h4 className="text-2xl font-bold text-white">{data.previousProject.title}</h4>
-          </Link>
-          
-          <Link 
-            to={`/case-study/${data.nextProject.slug}`} 
-            className="group flex flex-col gap-4 p-8 rounded-3xl border border-[#222] bg-[#0a0a0a] hover:border-[#444] transition-all duration-300 flex-1 text-right items-end"
-          >
-            <div className="flex items-center gap-2 text-[#a1a1a1] group-hover:text-white transition-colors">
-              <span className="text-sm font-semibold uppercase tracking-widest">Next Project</span>
-              <ChevronRight size={20} />
-            </div>
-            <h4 className="text-2xl font-bold text-white">{data.nextProject.title}</h4>
-          </Link>
+          {data.previousProject.slug === data.nextProject.slug ? (
+            <>
+              <Link 
+                to="/" 
+                className="group flex flex-col gap-4 p-8 rounded-3xl border border-[#222] bg-[#0a0a0a] hover:border-[#444] transition-all duration-300 flex-1"
+              >
+                <div className="flex items-center gap-2 text-[#a1a1a1] group-hover:text-white transition-colors">
+                  <ChevronLeft size={20} />
+                  <span className="text-sm font-semibold uppercase tracking-widest">Back to Works</span>
+                </div>
+                <h4 className="text-2xl font-bold text-white">Full Portfolio</h4>
+              </Link>
+              
+              <Link 
+                to={`/case-study/${data.nextProject.slug}`} 
+                className="group flex flex-col gap-4 p-8 rounded-3xl border border-[#222] bg-[#0a0a0a] hover:border-[#444] transition-all duration-300 flex-1 text-right items-end"
+              >
+                <div className="flex items-center gap-2 text-[#a1a1a1] group-hover:text-white transition-colors">
+                  <span className="text-sm font-semibold uppercase tracking-widest">Next Project</span>
+                  <ChevronRight size={20} />
+                </div>
+                <h4 className="text-2xl font-bold text-white">{data.nextProject.title}</h4>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link 
+                to={`/case-study/${data.previousProject.slug}`} 
+                className="group flex flex-col gap-4 p-8 rounded-3xl border border-[#222] bg-[#0a0a0a] hover:border-[#444] transition-all duration-300 flex-1"
+              >
+                <div className="flex items-center gap-2 text-[#a1a1a1] group-hover:text-white transition-colors">
+                  <ChevronLeft size={20} />
+                  <span className="text-sm font-semibold uppercase tracking-widest">Previous Project</span>
+                </div>
+                <h4 className="text-2xl font-bold text-white">{data.previousProject.title}</h4>
+              </Link>
+              
+              <Link 
+                to={`/case-study/${data.nextProject.slug}`} 
+                className="group flex flex-col gap-4 p-8 rounded-3xl border border-[#222] bg-[#0a0a0a] hover:border-[#444] transition-all duration-300 flex-1 text-right items-end"
+              >
+                <div className="flex items-center gap-2 text-[#a1a1a1] group-hover:text-white transition-colors">
+                  <span className="text-sm font-semibold uppercase tracking-widest">Next Project</span>
+                  <ChevronRight size={20} />
+                </div>
+                <h4 className="text-2xl font-bold text-white">{data.nextProject.title}</h4>
+              </Link>
+            </>
+          )}
         </section>
       </div>
     </CaseStudyLayout>
