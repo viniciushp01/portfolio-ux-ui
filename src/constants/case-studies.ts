@@ -7,7 +7,7 @@ export const CASE_STUDIES: Record<string, CaseStudyData> = {
     subtitle: "Designing a coach-athlete management system that started as a headcount problem and grew into the operational backbone of a real fitness community.",
     role: "Product Designer",
     project: "Mobile App · Functional Fitness Community, Belo Horizonte",
-    duration: "4 months",
+    duration: "Since April 2026",
     hero: {
       type: 'banner',
       bannerImage: '/hero-teamapp.png',
