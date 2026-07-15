@@ -8,10 +8,10 @@ interface WorkCardProps {
 }
 
 export const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
-  const { title, description, tags, imageBgColor, imageUrl, imageClassName, logoUrl, logoClassName, hasParticles, linkTo } = work;
+  const { title, description, tags, imageBgColor, imageUrl, imageClassName, imageContainerClassName, logoUrl, logoClassName, hasParticles, linkTo } = work;
   return (
-    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 bg-[#111111] border border-[#222] rounded-[2rem] p-4 lg:p-6 items-center transition-transform duration-300 hover:-translate-y-1 hover:border-[#333]">
-      <div className={`w-full lg:w-1/2 rounded-2xl overflow-hidden relative aspect-[4/3] lg:aspect-auto lg:h-[400px] flex items-center justify-center ${imageBgColor}`}>
+    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 bg-[#111111] border border-[#222] rounded-[2rem] p-4 lg:p-6 items-center lg:items-stretch transition-transform duration-300 hover:-translate-y-1 hover:border-[#333]">
+      <div className={`w-full lg:w-1/2 rounded-2xl overflow-hidden relative flex items-center justify-center ${imageContainerClassName || 'aspect-[4/3] lg:aspect-auto'} ${imageBgColor}`}>
         {hasParticles && (
           <Particles
             className="absolute inset-0 z-0"

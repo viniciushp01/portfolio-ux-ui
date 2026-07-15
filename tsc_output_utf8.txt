@@ -1,1 +1,0 @@
-﻿src/components/magicui/animated-grid-pattern.tsx(4,10): error TS2305: Module '"../../lib/utils"' has no exported member 'cn'.

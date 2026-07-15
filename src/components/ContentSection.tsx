@@ -7,9 +7,11 @@ import { CaseStudySection } from '../types';
 
 interface ContentSectionProps {
   section: CaseStudySection;
+  accentColor?: string;
+  showParticles?: boolean;
 }
 
-export const ContentSection: React.FC<ContentSectionProps> = ({ section }) => {
+export const ContentSection: React.FC<ContentSectionProps> = ({ section, accentColor = '#7c3aed', showParticles = true }) => {
   return (
     <div className="space-y-16">
       <section className="max-w-4xl">
@@ -43,23 +45,37 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ section }) => {
           )}
 
           {section.image.type === 'grid' && (
-            <div className="w-full rounded-[2rem] overflow-hidden relative py-16 md:py-24 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1a0b2e] via-[#050505] to-[#000000] flex items-center justify-center border border-[#222]">
+            <div 
+              className="w-full rounded-[2rem] overflow-hidden relative py-[45px] md:py-[67px] flex items-center justify-center border border-[#222]"
+              style={{ background: `radial-gradient(ellipse at top, ${accentColor}26 0%, #050505 55%, #000000 100%)` }}
+            >
               <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
-              <Particles
-                className="absolute inset-0 z-0 opacity-60"
-                quantity={100}
-                ease={80}
-                color="#ffffff"
-                refresh
-              />
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100%] h-[60%] max-w-[1000px] bg-[#7c3aed]/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
+              {showParticles && (
+                <Particles
+                  className="absolute inset-0 z-0 opacity-60"
+                  quantity={100}
+                  ease={80}
+                  color="#ffffff"
+                  refresh
+                />
+              )}
+              <div 
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100%] h-[60%] max-w-[1000px] blur-[120px] rounded-full pointer-events-none z-0"
+                style={{ backgroundColor: `${accentColor}33` }}
+              ></div>
 
-              <div className="relative z-10 w-full px-6 md:px-12">
-                <div className={`grid gap-6 md:gap-8 max-w-[1000px] mx-auto ${
-                  section.image.gridImages?.length === 4 ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-1 md:grid-cols-3'
+              <div className="relative z-10 w-full px-[17px] md:px-[34px]">
+                <div className={`grid gap-[17px] md:gap-[22px] mx-auto ${
+                  section.image.gridImages?.length === 4
+                    ? 'max-w-[700px] lg:max-w-[900px] grid-cols-2 xl:grid-cols-4'
+                    : section.image.gridImages?.length === 1
+                    ? 'max-w-[196px] lg:max-w-[240px] grid-cols-1'
+                    : section.image.gridImages?.length === 2
+                    ? 'max-w-[455px] lg:max-w-[520px] grid-cols-1 sm:grid-cols-2'
+                    : 'max-w-[700px] lg:max-w-[820px] grid-cols-1 md:grid-cols-3'
                 }`}>
                   {section.image.gridImages?.map((img, idx) => (
-                    <motion.div 
+                    <motion.div
                       key={idx}
                       initial={{ opacity: 0, y: 40 }}
                       whileInView={{ opacity: 1, y: 0 }}

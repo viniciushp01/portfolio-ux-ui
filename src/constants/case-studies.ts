@@ -1,7 +1,138 @@
 import { CaseStudyData } from '../types';
 
 export const CASE_STUDIES: Record<string, CaseStudyData> = {
-  'blinkplanet': {  
+  'teamapp': {
+    slug: 'teamapp',
+    title: "TeamApp",
+    subtitle: "Designing a coach-athlete management system that started as a headcount problem and grew into the operational backbone of a real fitness community.",
+    role: "Product Designer",
+    project: "Mobile App · Functional Fitness Community, Belo Horizonte",
+    duration: "4 months",
+    hero: {
+      type: 'banner',
+      bannerImage: '/hero-teamapp.png',
+      bannerAlt: 'TeamApp athlete homepage open on a phone, held in hand at an outdoor training space',
+      bannerTitle: 'TeamApp',
+      bannerSubtitle: 'Ready to challenge your limits?',
+      glowColor: "#22d3ee",
+      bgColor: "#050505"
+    },
+    sections: [
+      {
+        label: "The Challenge",
+        title: "It wasn't about attendance tracking — it was about planning",
+        content: "The first version of this problem wasn't about attendance tracking — it was about planning. The coach didn't know how many students to expect for weekend classes until they showed up, which meant last-minute workout changes with people already on-site. That single blind spot pointed to a bigger pattern: across 180 athletes and 3 coaches, everything ran on WhatsApp and memory — attendance, payments, trial-class follow-up, and knowing which athletes were quietly drifting away. The app grew to solve each of these, in the order the coach actually hit them.",
+        type: 'text'
+      },
+      {
+        label: "Key Decisions",
+        title: "Check-in was built to solve a planning problem first — then became the foundation for retention",
+        content: "A rough headcount guess wasn't enough for the coach to plan a workout around. That's why check-in is a three-step flow: the coach publishes the day's slots, the athlete confirms interest, and the coach validates real presence afterward. Only confirmed check-ins count, which produces attendance data reliable enough to build on — the same data that later powers the ranking below.",
+        type: 'text',
+        image: {
+          src: '',
+          alt: 'Check-in flow screens',
+          type: 'grid',
+          gridImages: [
+            { src: '/teamapp-aluno-checkin.jpg', alt: 'Athlete check-in confirmation' },
+            { src: '/teamapp-coach-presenca.jpg', alt: 'Coach validating athlete presence' }
+          ]
+        }
+      },
+      {
+        label: "Key Decisions",
+        title: "A monthly ranking, proposed as a retention lever and approved by the coach",
+        content: "Once attendance data was reliable, I proposed turning it into a monthly ranking — athletes ranked by days trained in the month, with a prize for whoever finishes first. It's a known pattern in wellness and fitness products: visible progress against peers is one of the more consistent ways to turn a workout into a habit. The coach approved it, and the effect went beyond the leaderboard itself — it gave the community something to talk about and tease each other over, and by the coach's own read, it visibly pushed more athletes to show up for class.",
+        type: 'text',
+        image: {
+          src: '',
+          alt: 'Monthly ranking screens',
+          type: 'grid',
+          gridImages: [
+            { src: '/teamapp-ranking.jpg', alt: 'Monthly ranking, top position' },
+            { src: '/teamapp-ranking-posicao-aluno.jpg', alt: "Athlete's own position on the ranking" }
+          ]
+        }
+      },
+      {
+        label: "Key Decisions",
+        title: "Payment became a gate, not just a ledger",
+        content: "Payment used to mean the coach manually re-reading WhatsApp threads to remember who had paid. Now due dates live in the app, athletes send proof of payment through a button that opens WhatsApp directly to the coach, and he updates status from there. The consequence that mattered most: check-in is now blocked for athletes with overdue payments, closing a gap where people kept training while behind on fees.",
+        type: 'text',
+        image: {
+          src: '',
+          alt: 'Payment screens',
+          type: 'grid',
+          gridImages: [
+            { src: '/teamapp-aluno-pagamento.jpg', alt: 'Athlete payment proof submission' },
+            { src: '/teamapp-coach-pagamentos.jpg', alt: 'Coach payment and due-date control' }
+          ]
+        }
+      },
+      {
+        label: "Key Decisions",
+        title: "Flagging athletes before they disappear",
+        content: "An athlete who's gone 7 days without a class and is also behind on payment is unlikely to come back on their own. Those athletes are now highlighted in both the student management screen and the financial screen, giving the coach a reason to reach out before losing them for good instead of noticing months later.",
+        type: 'text',
+        image: {
+          src: '',
+          alt: 'Student management screen with churn risk highlighted',
+          type: 'grid',
+          gridImages: [
+            { src: '/teamapp-coach-alunos.jpg', alt: 'Student management, churn risk flagged' }
+          ]
+        }
+      },
+      {
+        label: "Key Decisions",
+        title: "Trial classes as a small sales funnel",
+        content: "Trial athletes used to leave no trace once the class ended. Now the coach can add them with their WhatsApp contact and follow up directly on whether they're converting — turning a one-off visit into a tracked step instead of a guess.",
+        type: 'text',
+        image: {
+          src: '',
+          alt: 'Trial athlete screens',
+          type: 'grid',
+          gridImages: [
+            { src: '/teamapp-coach-trial-add.jpg', alt: 'Adding a trial athlete with contact info' },
+            { src: '/teamapp-coach-trial.jpg', alt: 'Trial athlete follow-up list' }
+          ]
+        }
+      },
+      {
+        label: "Key Decisions",
+        title: "Team Run as an opt-in layer, not a default",
+        content: "Since Team Run is a distinct group from the core functional program, running features stay invisible until an athlete opts in. Inside it, athletes share their own runs to motivate each other, the coach publishes weekly running plans for whoever opted in, and can schedule group runs — a weekend session everyone trains together, for example.",
+        type: 'text',
+        image: {
+          src: '',
+          alt: 'Team Run screens',
+          type: 'grid',
+          gridImages: [
+            { src: '/teamapp-aluno-teamrun.jpg', alt: 'Team Run collective feed' },
+            { src: '/teamapp-aluno-teamrun-opt.jpg', alt: 'Team Run opt-in screen' }
+          ]
+        }
+      },
+      {
+        label: "Key Decisions",
+        title: "Building like the product had to survive contact with real devices, not just Figma",
+        content: "Every feature moved through a staging environment — its own database included — before ever touching production, and testing was never assumed to be platform-agnostic: the same component was checked on both Android and iOS, since the two render and break in different ways. Broken components caught in that loop fed straight back into the design — spacing, states, and edge cases got refined until they held up on every device, not just in the mockup. It's not the part of the job most designers show, but it's what makes handoff with developers fast: decisions arrive already tested against how the product actually behaves, not just how it looks.",
+        type: 'text'
+      }
+    ],
+    footerSections: [
+      {
+        label: "Learnings",
+        title: "This wasn't built from a single discovery sprint",
+        content: "This wasn't built from a single discovery sprint — it grew one real operational headache at a time, starting from a coach who just wanted to know how many people were showing up on Saturday. Payments, churn flags, and trial follow-up all trace back to something the coach was already doing badly by hand. The ranking is the exception worth calling out: it's the one decision that wasn't a fix for an existing pain, but a retention mechanic I proposed on top of data the app already had.",
+        type: 'text'
+      }
+    ],
+    sectionParticles: false,
+    nextProject: { title: "Blinkplanet Explorer", slug: "blinkplanet" },
+    previousProject: { title: "Blinkplanet Álbum Feature", slug: "album" }
+  },
+  'blinkplanet': {
     slug: 'blinkplanet',
     title: "Blinkplanet Explorer",
     subtitle: "App designed to drive user acquisition and ecosystem conversion for BlinkPlanet’s Web3 Marketplace",
@@ -98,7 +229,7 @@ export const CASE_STUDIES: Record<string, CaseStudyData> = {
       }
     ],
     nextProject: { title: "Blinkplanet Álbum Feature", slug: "album" },
-    previousProject: { title: "Blinkplanet Álbum Feature", slug: "album" }
+    previousProject: { title: "TeamApp", slug: "teamapp" }
   },
   'album': {
     slug: 'album',
@@ -174,7 +305,7 @@ export const CASE_STUDIES: Record<string, CaseStudyData> = {
       { value: 3500, suffix: "+", description: "New Users acquired" },
       { value: 15, prefix: "+", suffix: "%", description: "Increase in Secondary Market" }
     ],
-    nextProject: { title: "Blinkplanet Explorer", slug: "blinkplanet" },
+    nextProject: { title: "TeamApp", slug: "teamapp" },
     previousProject: { title: "Blinkplanet Explorer", slug: "blinkplanet" }
   }
 };

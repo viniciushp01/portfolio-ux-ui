@@ -27,13 +27,15 @@ export default function CaseStudyDetail() {
 
       <div className="space-y-32">
         {data.sections.map((section, idx) => (
-          <ContentSection key={idx} section={section} />
+          <ContentSection key={idx} section={section} accentColor={data.hero.glowColor} showParticles={data.sectionParticles !== false} />
         ))}
 
-        <ResultsImpact title={data.resultsTitle} results={data.results} />
+        {data.resultsTitle && data.results && (
+          <ResultsImpact title={data.resultsTitle} results={data.results} />
+        )}
         
         {data.footerSections && data.footerSections.map((section, idx) => (
-          <ContentSection key={`footer-${idx}`} section={section} />
+          <ContentSection key={`footer-${idx}`} section={section} accentColor={data.hero.glowColor} showParticles={data.sectionParticles !== false} />
         ))}
 
         {/* Project Navigation */}

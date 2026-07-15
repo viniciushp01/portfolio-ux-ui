@@ -98,7 +98,7 @@ export function CaseStudyHero({ hero }: CaseStudyHeroProps) {
             </div>
           ))}
         </motion.div>
-      ) : (
+      ) : hero.type === 'window' ? (
         <motion.div 
           className="relative w-full max-w-[1600px] h-full flex items-center justify-center"
         >
@@ -119,6 +119,31 @@ export function CaseStudyHero({ hero }: CaseStudyHeroProps) {
             </motion.div>
           </div>
         </motion.div>
+      ) : (
+        <div className="absolute inset-0 z-10">
+          <img 
+            src={hero.bannerImage} 
+            alt={hero.bannerAlt} 
+            className="absolute inset-0 w-full h-full object-contain md:object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", damping: 20, stiffness: 80, delay: 0.2 }}
+            className="relative z-10 h-full flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1600px] mx-auto"
+          >
+            <h1 
+              className="font-clash font-bold uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[0.02em] mb-3 md:mb-4"
+              style={{ color: hero.glowColor }}
+            >
+              {hero.bannerTitle}
+            </h1>
+            <p className="text-xs sm:text-sm md:text-base uppercase tracking-[3px] text-[#e0e0e0] font-medium max-w-md">
+              {hero.bannerSubtitle}
+            </p>
+          </motion.div>
+        </div>
       )}
     </div>
   );

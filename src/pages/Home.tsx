@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* Selected Works Section */}
       <section id="selected-works" className="px-4 md:px-8 lg:px-20 max-w-[1600px] mx-auto py-20">
-        <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">Selected Works</h2>
+        <h2 className="text-3xl md:text-5xl font-clash font-bold uppercase mb-16 tracking-[0.02em]">Selected Works</h2>
         
         <div className="flex flex-col gap-10 lg:gap-16">
           {SELECTED_WORKS.map((work, index) => (

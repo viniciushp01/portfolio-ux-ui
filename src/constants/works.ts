@@ -2,9 +2,18 @@ import { Work } from '../types';
 
 export const SELECTED_WORKS: Work[] = [
   {
+    title: "Turning attendance into a gamified monthly ranking that drives retention for 180+ athletes",
+    description: "Mobile app that centralized check-ins, attendance, and payments for a real fitness community — with a monthly ranking that turns consistency into a competitive habit.",
+    tags: ["Retention", "Wellness & Fitness", "Mobile App"],
+    imageBgColor: "bg-[#050505]",
+    imageUrl: "/teamapp-hero-banner.png",
+    imageClassName: "absolute inset-0 w-full h-full object-cover hover:scale-105",
+    linkTo: "/case-study/teamapp"
+  },
+  {
     title: "Bringing 7,000+ new users to BlinkPlanet Marketplace through Explorer social-app",
     description: "App designed to drive user acquisition and ecosystem conversion for BlinkPlanet’s Web3 Marketplace",
-    tags: ["Gamification", "WEB3", "Web App"],
+    tags: ["Gamification", "WEB3", "Web App", "Acquisition & Retention"],
     imageBgColor: "bg-[#050505]",
     logoUrl: "/explorer-logo.png",
     logoClassName: "w-[65%] max-w-[300px] top-8 drop-shadow-[0_0_25px_rgba(255,255,255,0.15)] transition-transform duration-500 hover:scale-105",
@@ -16,7 +25,7 @@ export const SELECTED_WORKS: Work[] = [
   {
     title: "Generating R$60k+ in digital asset sales.",
     description: "BlinkPlanet feature designed to transform nostalgia-driven collecting into a revenue engine",
-    tags: ["Web3", "Interface Architecture", "UX Design"],
+    tags: ["Web3", "Interface Architecture", "UX Design", "Acquisition"],
     imageBgColor: "bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1e3a8a] via-[#050505] to-[#000000]",
     imageUrl: "/gif-album.gif",
     imageClassName: "relative w-[85%] h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] object-cover hover:scale-105 transition-transform duration-500 z-10",

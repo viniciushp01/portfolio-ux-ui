@@ -7,6 +7,7 @@ export interface Work {
   imageBgColor: string;
   imageUrl: string;
   imageClassName?: string;
+  imageContainerClassName?: string;
   logoUrl?: string;
   logoClassName?: string;
   hasParticles?: boolean;
@@ -14,7 +15,7 @@ export interface Work {
 }
 
 export interface CaseStudyHeroData {
-  type: 'phones' | 'window';
+  type: 'phones' | 'window' | 'banner';
   phones?: Array<{
     id: string;
     src: string;
@@ -27,6 +28,10 @@ export interface CaseStudyHeroData {
   }>;
   windowImage?: string;
   windowAlt?: string;
+  bannerImage?: string;
+  bannerAlt?: string;
+  bannerTitle?: string;
+  bannerSubtitle?: string;
   glowColor: string;
   bgColor: string;
 }
@@ -62,9 +67,10 @@ export interface CaseStudyData {
   duration: string;
   hero: CaseStudyHeroData;
   sections: CaseStudySection[];
-  resultsTitle: string;
-  results: CaseStudyResult[];
+  resultsTitle?: string;
+  results?: CaseStudyResult[];
   footerSections?: CaseStudySection[];
+  sectionParticles?: boolean;
   nextProject: {
     title: string;
     slug: string;
